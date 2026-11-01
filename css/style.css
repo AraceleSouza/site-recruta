@@ -506,6 +506,10 @@ SEÇÃO SOLUÇÕES
     box-shadow 0.3s ease;
 }
 
+.solution-card h3 {
+    margin-bottom: 12px;
+}
+
 .solution-card:hover {
     transform: translateY(-6px);
     background: rgba(255, 255, 255, 0.10);
@@ -584,6 +588,186 @@ SEÇÃO SOLUÇÕES
 
 .solution-card:hover .solution-line {
     width: 80px;
+}
+/* =========================
+   PLANOS COMERCIAIS
+========================= */
+
+.plans {
+    background: #f1f5fb;
+    padding: 75px 0;
+}
+
+.plans-header {
+    max-width: 750px;
+    margin-bottom: 38px;
+}
+
+.plans-header h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(28px, 3vw, 36px);
+    line-height: 1.2;
+    color: var(--navy);
+    margin: 12px 0;
+}
+
+.plans-header p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* GRID DOS PLANOS */
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* CARDS */
+
+.plan-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(7, 21, 47, 0.07);
+}
+
+/* DESTAQUE PLANO PLUS */
+
+.plan-card-featured {
+    border: 1.5px solid var(--blue);
+}
+
+/* IDENTIFICAÇÃO */
+
+.plan-label {
+    display: inline-block;
+    width: fit-content;
+    background: #eaf1ff;
+    color: var(--blue);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.plan-card-featured .plan-label {
+    background: var(--blue);
+    color: var(--white);
+}
+
+/* TÍTULOS */
+
+.plan-card h3 {
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.plan-card h4 {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* LISTA */
+
+.plan-card ul {
+    padding-left: 18px;
+    margin-bottom: 25px;
+}
+
+.plan-card li {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.plan-card .plan-benefit {
+    color: #059669;
+    font-weight: 700;
+}
+
+/* RODAPÉ */
+
+.plan-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: auto;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    .plans {
+        padding: 60px 0;
+    }
+
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .plans-header {
+        margin-bottom: 30px;
+    }
+
+    .plan-card {
+        padding: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .plans {
+        padding: 50px 0;
+    }
+
+    .plans-header h2 {
+        font-size: 27px;
+    }
+
+    .plans-header p {
+        font-size: 14px;
+    }
+
+    .plan-card {
+        padding: 23px;
+        border-radius: 16px;
+    }
+
+    .plan-card h3 {
+        font-size: 20px;
+    }
+
+    .plan-card li {
+        font-size: 13px;
+    }
 }
 
 /* =========================================
@@ -1094,6 +1278,15 @@ FOOTER
     align-items: center;
     text-align: center;
     width: 100%;
+    flex-direction: column;
+}
+
+.footer-credit {
+    font-size: 12px;
+}
+
+.footer-credit {
+    font-size: 12px;
 }
 
 .copyright {
